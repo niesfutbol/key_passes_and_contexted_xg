@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add `player_stats_to_key_passes()`
+
 ### Fixed
 
 ### Changed
