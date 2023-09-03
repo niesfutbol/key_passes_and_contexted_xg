@@ -5,7 +5,7 @@ player_stats_to_key_passes <- function(player_stats) {
     dplyr::ungroup()
 }
 
-match_stats_to_tidy_match<- function(match_stats) {
+match_stats_to_tidy_match <- function(match_stats) {
   home <- select_home_metrics(match_stats)
   away <- select_away_metrics(match_stats)
   rbind(home, away) |>
