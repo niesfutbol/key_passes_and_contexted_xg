@@ -1,3 +1,4 @@
+#' @export
 match_and_player_stats_to_tidy_match_and_key_passes <- function(match_stats, player_stats) {
   key_passes <- player_stats_to_key_passes(player_stats)
   tidy_match <- match_stats_to_tidy_match(match_stats)
