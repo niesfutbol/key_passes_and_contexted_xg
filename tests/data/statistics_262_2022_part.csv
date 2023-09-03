@@ -1,0 +1,4 @@
+match_id,home,away,home_id,home_total_shots,home_shots_on_goal,home_shots_insidebox,home_blocked_shots,away_id,away_total_shots,away_shots_on_goal,away_shots_insidebox,away_blocked_shots,home_scored_penalties,away_scored_penalties,home_total_penalties,away_total_penalties
+1028348.0,0.0,0.0,2279.0,14.0,1.0,6.0,3.0,2278.0,7.0,1.0,2.0,1.0,0,0,0,0
+1028349.0,2.0,3.0,2278.0,10.0,7.0,7.0,,2279.0,24.0,9.0,16.0,6.0,0,1,0,1
+967071.0,2.0,1.0,2281.0,11.0,4.0,7.0,3.0,2287.0,16.0,5.0,10.0,4.0,1,0,1,0

@@ -1,0 +1,7 @@
+match_id,goal,team_id,total_shots,shots_on_goal,shots_insidebox,blocked_shots,scored_penalties,total_penalties,home
+1028348,0,2279,14.0,1.0,6.0,3.0,0,0,TRUE
+1028348,0,2278,7.0,1.0,2.0,1.0,0,0,FALSE
+1028349,2,2278,10.0,7.0,7.0,,0,0,TRUE
+1028349,3,2279,24.0,9.0,16.0,6.0,1,1,FALSE
+967071,2,2281,11.0,4.0,7.0,3.0,1,1,TRUE
+967071,1,2287,16.0,5.0,10.0,4.0,0,0,FALSE
