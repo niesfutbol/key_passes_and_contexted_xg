@@ -1,3 +1,14 @@
+match_and_player_stats_to_tidy_match_and_key_passes <- function(match_stats, player_stats) {
+  key_passes <- player_stats_to_key_passes(player_stats)
+  tidy_match <- match_stats_to_tidy_match(match_stats)
+  join_tidy_match_and_key_passes(tidy_match, key_passes)
+}
+
+join_tidy_match_and_key_passes <- function(tidy_match, key_passes) {
+  tidy_match |>
+    dplyr::left_join(key_passes, by = c("match_id" = "match", "team_id" = "team"))
+}
+
 player_stats_to_key_passes <- function(player_stats) {
   player_stats |>
     dplyr::group_by(match, team) |>
@@ -27,9 +38,4 @@ match_stats_to_tidy_match <- function(match_stats) {
     dplyr::rename(goal = away) |>
     dplyr::mutate(home = FALSE) |>
     dplyr::rename_with(~ gsub("away_", "", .x, fixed = TRUE))
-}
-
-join_tidy_match_and_key_passes <- function(tidy_match, key_passes) {
-  tidy_match |>
-    dplyr::left_join(key_passes, by = c("match_id" = "match", "team_id" = "team"))
 }
