@@ -6,14 +6,14 @@ player_stats_to_key_passes <- function(player_stats) {
 }
 
 match_stats_to_tidy_match <- function(match_stats) {
-  home <- select_home_metrics(match_stats)
-  away <- select_away_metrics(match_stats)
+  home <- .select_home_metrics(match_stats)
+  away <- .select_away_metrics(match_stats)
   rbind(home, away) |>
     dplyr::rename(team_id = id) |>
     dplyr::arrange(-match_id)
 }
 
-select_home_metrics <- function(match_stats) {
+.select_home_metrics <- function(match_stats) {
   match_stats |>
     dplyr::select(c(match_id, starts_with("home"))) |>
     dplyr::rename(goal = home) |>
@@ -21,7 +21,7 @@ select_home_metrics <- function(match_stats) {
     dplyr::rename_with(~ gsub("home_", "", .x, fixed = TRUE))
 }
 
-select_away_metrics <- function(match_stats) {
+.select_away_metrics <- function(match_stats) {
   match_stats |>
     dplyr::select(c(match_id, starts_with("away"))) |>
     dplyr::rename(goal = away) |>
