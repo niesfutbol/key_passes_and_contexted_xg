@@ -28,3 +28,8 @@ match_stats_to_tidy_match <- function(match_stats) {
     dplyr::mutate(home = FALSE) |>
     dplyr::rename_with(~ gsub("away_", "", .x, fixed = TRUE))
 }
+
+join_tidy_match_and_key_passes <- function(tidy_match, key_passes) {
+  tidy_match |>
+    dplyr::left_join(key_passes, by = c("match_id" = "match", "team_id" = "team"))
+}
