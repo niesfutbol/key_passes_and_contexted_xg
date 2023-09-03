@@ -15,3 +15,13 @@ describe("Transform match stats to tidy", {
     expect_equal(obtained, expected)
   })
 })
+
+describe("Join tidy match to key passes", {
+  it("First example", {
+    tidy_match <- readr::read_csv("/workdir/tests/data/key_passes.csv", show_col_types = FALSE)
+    key_passes <- readr::read_csv("/workdir/tests/data/statistics_262_2022_part_tidy.csv", show_col_types = FALSE)
+    expected <- readr::read_csv("/workdir/tests/data/math_with_key_passes.csv", show_col_types = FALSE)
+    obtained <- join_tidy_match_and_key_passes(tidy_match,key_passes)
+    expect_equal(obtained, expected)
+  })
+})
