@@ -20,6 +20,7 @@ check:
 
 clean:
 	rm --force *.tar.gz
+	rm --force --recursive contextedXG.Rcheck
 	rm --force --recursive tests/testthat/_snaps
 	rm --force NAMESPACE
 
